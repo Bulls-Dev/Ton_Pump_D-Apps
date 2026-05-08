@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import StatsPage from './components/StatsPage';
 import DocsPage from './components/DocsPage';   
 import { useTonData } from './hooks/useTonData';
+import SwapWidget from './components/SwapWidget';
 
 function App() {
   const { tokens, loading } = useTonData();
@@ -43,6 +44,13 @@ function App() {
 
       {selectedToken && (
         <ChartModal token={selectedToken} onClose={() => setSelectedToken(null)} />
+      )}
+
+      {selectedToken && (
+        <SwapWidget 
+          selectedToken={selectedToken} 
+          onClose={() => setSelectedToken(null)} 
+        />
       )}
     </div>
   );

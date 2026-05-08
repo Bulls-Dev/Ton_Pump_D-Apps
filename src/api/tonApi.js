@@ -2,10 +2,9 @@ import axios from 'axios';
 
 const GECKO_BASE = 'https://api.geckoterminal.com/api/v2/networks/ton';
 
-// Fonction utilitaire sécurisée pour formater les chiffres
 const formatCash = (n) => {
-  const num = parseFloat(n); // On force la conversion en nombre
-  if (isNaN(num)) return "0.00"; // Si ce n'est pas un nombre, on évite le crash
+  const num = parseFloat(n);
+  if (isNaN(num)) return "0.00"; 
   
   if (num < 1e3) return num.toFixed(2);
   if (num >= 1e3 && num < 1e6) return +(num / 1e3).toFixed(1) + "K";
@@ -28,11 +27,9 @@ export const getRealTonData = async () => {
       const attr = pool.attributes;
       const meta = tokenData?.attributes || {};
       
-      // On s'assure que reserve est bien un nombre
       const reserve = parseFloat(attr.reserve_in_usd) || 0;
       const volume = parseFloat(attr.volume_usd.h24) || 0;
 
-      // Logique de simulation de sécurité
       const security = {
         mintRenounced: Math.random() > 0.3,
         lowConcentration: Math.random() > 0.4,

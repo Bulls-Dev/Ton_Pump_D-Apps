@@ -3,7 +3,6 @@ export default function Footer() {
     <footer className="border-t border-white/5 bg-[#05070a] py-12 mt-20">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
         
-        {/* Partie Gauche : Status */}
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-[0_0_8px_#22c55e]"></div>
@@ -13,7 +12,7 @@ export default function Footer() {
           <span className="font-mono text-[10px] text-gray-500 uppercase tracking-widest">Network: TON_Mainnet</span>
         </div>
 
-        {/* Partie Centrale : Ton identité - EFFET NÉON FIXE */}
+        
 <div className="cursor-default text-center">
   <p className="font-mono text-[11px] text-gray-500 tracking-[0.2em] uppercase">
     Designed & Built by 
@@ -28,7 +27,7 @@ export default function Footer() {
   </p>
 </div>
 
-        {/* Partie Droite : Liens/Socials style Terminal */}
+        
 <div className="flex flex-wrap justify-center gap-6 font-mono text-[10px] text-gray-500 uppercase">
   <a 
     href="https://t.me/dev_web3_blocks" 
@@ -58,7 +57,7 @@ export default function Footer() {
 
       </div>
       
-      {/* Petite ligne de copyright - PLUS ESPACÉE ET ÉCLAIRCIE */}
+      
       <div className="text-center mt-12 opacity-40">
         <p className="text-[9px] font-mono text-gray-400 uppercase tracking-[0.8em]">
           © 2024 TONPUMP_TERMINAL_V1.0.4 // NO_FINANCIAL_ADVICE

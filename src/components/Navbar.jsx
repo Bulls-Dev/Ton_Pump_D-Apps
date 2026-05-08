@@ -1,11 +1,10 @@
 import { TonConnectButton } from '@tonconnect/ui-react';
 
-// On ajoute setTab et currentTab pour savoir où on est et changer de page
 export default function Navbar({ setTab, currentTab }) {
   return (
     <nav className="sticky top-0 z-50 border-b border-tonBlue/20 bg-[#05070a]/80 backdrop-blur-xl px-6 py-4 flex justify-between items-center">
       <div className="flex items-center gap-3">
-        {/* Clique sur le logo pour revenir au Terminal */}
+
         <div 
           onClick={() => setTab('terminal')}
           className="w-10 h-10 bg-tonBlue rounded-sm flex items-center justify-center font-black text-xl italic shadow-[0_0_15px_#0088CC] cursor-pointer"
@@ -45,7 +44,7 @@ export default function Navbar({ setTab, currentTab }) {
           </button>
         </div>
 
-        {/* Le bouton de connexion TON */}
+        
         <div className="ton-button-wrapper">
           <TonConnectButton />
         </div>

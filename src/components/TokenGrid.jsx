@@ -1,6 +1,5 @@
 import TokenCard from './TokenCard';
 
-// Fonction pour convertir "1.5K" en 1500 pour le tri
 const parseVal = (str) => {
   if (!str || typeof str !== 'string') return 0;
   const num = parseFloat(str.replace(/[KMB$]/g, ''));
@@ -11,13 +10,10 @@ const parseVal = (str) => {
 };
 
 export default function TokenGrid({ tokens, onSelectToken }) {
-  // 1. NEW : Tri par date de création
   const newPairs = [...tokens].sort((a, b) => b.createdAt - a.createdAt);
 
-  // 2. TRENDING : Tri par Volume réel
   const trending = [...tokens].sort((a, b) => parseVal(b.volume24h) - parseVal(a.volume24h));
 
-  // 3. GRADUATING : Tri par progrès
   const graduating = tokens
     .filter(t => t.progress > 10)
     .sort((a, b) => b.progress - a.progress);

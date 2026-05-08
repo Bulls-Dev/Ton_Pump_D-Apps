@@ -1,11 +1,9 @@
 export default function ChartModal({ token, onClose }) {
   if (!token) return null;
 
-  // On nettoie l'adresse pour Gecko et pour les DEX
   const poolAddress = token.id.split('_')[1];
   const tokenAddress = token.address;
 
-  // Liens de Swap directs pour le mode Degen
   const stonFiSwap = `https://app.ston.fi/swap?chartVisible=false&ft=TON&tt=${tokenAddress}`;
 
   return (
@@ -36,7 +34,6 @@ export default function ChartModal({ token, onClose }) {
           </div>
 
           <div className="flex items-center gap-3">
-            {/* BOUTON SWAP DEGEN */}
             <a 
               href={stonFiSwap}
               target="_blank"
@@ -54,10 +51,8 @@ export default function ChartModal({ token, onClose }) {
           </div>
         </div>
 
-        {/* TERMINAL MAIN AREA */}
         <div className="flex-1 flex flex-col md:flex-row bg-black overflow-hidden">
           
-          {/* CHART AREA */}
           <div className="flex-[3] relative border-r border-white/5 bg-[#05070a]">
             <iframe 
               height="100%" 
@@ -72,7 +67,6 @@ export default function ChartModal({ token, onClose }) {
             ></iframe>
           </div>
 
-          {/* SIDEBAR TOOLS (Mobile: Hidden) */}
           <div className="hidden md:flex flex-[1] flex-col p-6 space-y-6 bg-[#0a0e14]/50 overflow-y-auto">
             <div>
               <h4 className="text-[10px] text-gray-500 uppercase font-mono mb-4 tracking-widest border-b border-white/5 pb-2">Quick_Actions</h4>
@@ -112,7 +106,6 @@ export default function ChartModal({ token, onClose }) {
           </div>
         </div>
 
-        {/* MOBILE BOTTOM BUY BUTTON */}
         <div className="md:hidden p-4 bg-[#0a0e14] border-t border-white/10">
            <a 
               href={stonFiSwap}

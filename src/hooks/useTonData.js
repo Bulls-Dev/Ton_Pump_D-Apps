@@ -8,7 +8,6 @@ export function useTonData() {
   const updateData = async () => {
     const data = await getRealTonData();
     if (data.length > 0) {
-      // On trie par date de création pour la colonne "New"
       const sorted = data.sort((a, b) => b.createdAt - a.createdAt);
       setTokens(sorted);
     }
@@ -17,7 +16,7 @@ export function useTonData() {
 
   useEffect(() => {
     updateData();
-    const timer = setInterval(updateData, 20000); // Mise à jour toutes les 20s
+    const timer = setInterval(updateData, 20000); 
     return () => clearInterval(timer);
   }, []);
 

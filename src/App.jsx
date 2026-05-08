@@ -3,22 +3,20 @@ import Navbar from './components/Navbar';
 import TokenGrid from './components/TokenGrid';
 import ChartModal from './components/ChartModal';
 import Footer from './components/Footer';
-import StatsPage from './components/StatsPage'; // Import
-import DocsPage from './components/DocsPage';   // Import
+import StatsPage from './components/StatsPage';
+import DocsPage from './components/DocsPage';   
 import { useTonData } from './hooks/useTonData';
 
 function App() {
   const { tokens, loading } = useTonData();
   const [selectedToken, setSelectedToken] = useState(null);
-  const [activeTab, setActiveTab] = useState('terminal'); // 'terminal', 'stats', 'docs'
+  const [activeTab, setActiveTab] = useState('terminal'); 
 
   return (
     <div className="min-h-screen flex flex-col bg-[#05070a]">
-      {/* On passe setActiveTab à la Navbar pour que les boutons fonctionnent */}
       <Navbar setTab={setActiveTab} currentTab={activeTab} />
       
       <main className="flex-grow max-w-7xl mx-auto py-10 px-4 w-full">
-        {/* Affichage conditionnel selon l'onglet */}
         {activeTab === 'terminal' && (
           <>
             <header className="text-center mb-16 relative">

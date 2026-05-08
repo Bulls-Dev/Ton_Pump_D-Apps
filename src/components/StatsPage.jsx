@@ -11,7 +11,7 @@ export default function StatsPage({ tokens }) {
   return (
     <div className="max-w-7xl mx-auto space-y-6 animate-fadeIn py-2 font-mono">
       
-      {/* 1. TOP BAR OVERVIEW (Very Pro / Compact) */}
+      
       <div className="grid grid-cols-2 md:grid-cols-4 bg-[#0a0e14] border border-white/5 divide-x divide-white/5">
         <div className="p-4">
           <p className="text-[10px] text-gray-500 uppercase">Total_Vol_24h</p>
@@ -35,7 +35,7 @@ export default function StatsPage({ tokens }) {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         
-        {/* 2. TOP GAINERS (The "Money" List) */}
+        
         <div className="lg:col-span-2 bg-[#0a0e14] border border-white/5">
           <div className="p-4 border-b border-white/5 flex justify-between items-center bg-white/5">
             <h3 className="text-xs font-black uppercase tracking-widest text-white italic">🚀 Top_Performance_Movers</h3>
@@ -70,7 +70,7 @@ export default function StatsPage({ tokens }) {
           </table>
         </div>
 
-        {/* 3. RECENT DEPLOYMENTS (The "New" List) */}
+        
         <div className="bg-[#0a0e14] border border-white/5">
           <div className="p-4 border-b border-white/5 bg-white/5">
             <h3 className="text-xs font-black uppercase tracking-widest text-white italic">🕒 Live_Deployments</h3>
@@ -101,7 +101,7 @@ export default function StatsPage({ tokens }) {
 
       </div>
 
-      {/* 4. TERMINAL FOOTER STATS */}
+      
       <div className="bg-black border border-white/10 p-4 flex flex-col md:flex-row justify-between items-center gap-4">
         <div className="flex items-center gap-4">
            <span className="text-[10px] text-gray-600 uppercase font-bold">Terminal_Output:</span>
